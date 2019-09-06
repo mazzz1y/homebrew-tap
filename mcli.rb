@@ -2,16 +2,16 @@
 class Mcli < Formula
   desc "A simple shortcut menu for shell commands"
   homepage "https://github.com/dmirubtsov/mcli"
-  version "1.0.5"
+  version "1.0.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/dmirubtsov/mcli/releases/download/v1.0.5/mcli_1.0.5_darwin_amd64.tar.gz"
-    sha256 "f7d3fabdfad072bc169aa38e53a6e886d0de15073e451f254be796bbbe5370a0"
+    url "https://github.com/dmirubtsov/mcli/releases/download/v1.0.6/mcli_1.0.6_darwin_amd64.tar.gz"
+    sha256 "4f87154038f214d86268cf1e7e947b9d8ce415de1eb6a80a7e995b34adbccf51"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/dmirubtsov/mcli/releases/download/v1.0.5/mcli_1.0.5_linux_amd64.tar.gz"
-      sha256 "b2b1eeb66dad4f5f520a5c0546af8ce9ef6875f9948c1ff34ca845e2b8b5b653"
+      url "https://github.com/dmirubtsov/mcli/releases/download/v1.0.6/mcli_1.0.6_linux_amd64.tar.gz"
+      sha256 "5a1c97f9e00d8f8f3d11b93c7bf54cd9ba33ce6a4cbeab236964634cbc2beecd"
     end
   end
 
