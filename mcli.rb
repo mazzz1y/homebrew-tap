@@ -5,20 +5,20 @@
 class Mcli < Formula
   desc "A simple shortcut menu for shell commands"
   homepage "https://github.com/mazzz1y/mcli"
-  version "3.0.0"
+  version "3.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mazzz1y/mcli/releases/download/v3.0.0/mcli_3.0.0_darwin_arm64.tar.gz"
-      sha256 "02c6e3bf31283943b7edc64516b21c553acd1dd734b637db29006dad0fcbe3a8"
+      url "https://github.com/mazzz1y/mcli/releases/download/v3.1.0/mcli_3.1.0_darwin_arm64.tar.gz"
+      sha256 "b840cafce8c01fd41e1b839e6b3a36a6f52fdb4768e68a23ed1e3fc61462253d"
 
       def install
         bin.install "mcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mazzz1y/mcli/releases/download/v3.0.0/mcli_3.0.0_darwin_amd64.tar.gz"
-      sha256 "1177af92ade151db0f23f231b42a45979f70a0ec29c1ca7e6206bbb5feded47a"
+      url "https://github.com/mazzz1y/mcli/releases/download/v3.1.0/mcli_3.1.0_darwin_amd64.tar.gz"
+      sha256 "a480bf457e9474b1e8915cc885c4cd7fcf71452648cb2f93dd42b2b6ebf15cb7"
 
       def install
         bin.install "mcli"
@@ -28,24 +28,24 @@ class Mcli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mazzz1y/mcli/releases/download/v3.0.0/mcli_3.0.0_linux_armv6.tar.gz"
-      sha256 "1ce791e4d4029cfe7ccd65e904d43c9be748cc3c75615e48bfd48f7477810e9e"
+      url "https://github.com/mazzz1y/mcli/releases/download/v3.1.0/mcli_3.1.0_linux_armv6.tar.gz"
+      sha256 "2f73fd51868b22bd1378c352604cdaf453606822524b130aab2cd392276974cb"
 
       def install
         bin.install "mcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mazzz1y/mcli/releases/download/v3.0.0/mcli_3.0.0_linux_amd64.tar.gz"
-      sha256 "6d242a16288916f2ae51f4c40c11975ff7ee769560bbb48a75daaf59b9d18872"
+      url "https://github.com/mazzz1y/mcli/releases/download/v3.1.0/mcli_3.1.0_linux_amd64.tar.gz"
+      sha256 "2244bb35be91ef2b054018e1870433efe9d3eb98b9ed1572351d35aa18953cec"
 
       def install
         bin.install "mcli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mazzz1y/mcli/releases/download/v3.0.0/mcli_3.0.0_linux_arm64.tar.gz"
-      sha256 "f27bcbd5554a47588e1fb9d62fbd12607a591de3708562886721bcd0f5f1769d"
+      url "https://github.com/mazzz1y/mcli/releases/download/v3.1.0/mcli_3.1.0_linux_arm64.tar.gz"
+      sha256 "ce2513876b40e68969b1956448ee17922764ec1909ea9154e44daaf8c76735a8"
 
       def install
         bin.install "mcli"
