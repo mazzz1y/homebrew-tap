@@ -10,7 +10,7 @@ class Mcli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_arm64.tar.gz"
-      sha256 "37ff739111157c0916ef3e18b67dc937a1521a679fe1334e2a31b2d9a9641a6f"
+      sha256 "832dbadbfece49a0e8d0d3fa3ef474b5145d58d0b8bf58e1f99c074fd6edbbb3"
 
       def install
         bin.install "mcli"
@@ -18,7 +18,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_amd64.tar.gz"
-      sha256 "bf9406c708b1101bfd2731da292fcaf7a52209f954e2859d26a324fb1009c929"
+      sha256 "0cfdc84dfa26303093ef51f79f6fd356c433660dfa409e3922a673e7fc0101e2"
 
       def install
         bin.install "mcli"
@@ -27,9 +27,17 @@ class Mcli < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_armv6.tar.gz"
+      sha256 "b6c8b682d93e6d4f5a451717fb91368ac3ab0cccdbe56d00c9cc59dee1145454"
+
+      def install
+        bin.install "mcli"
+      end
+    end
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_amd64.tar.gz"
-      sha256 "9989deaab8ac44b982c0934ce1761c2393a58cfc926f9edc0505bff19b1a77ff"
+      sha256 "32024569b1c7a8131332b42711ae142f85011cab85c1e1c04f9ccbbbe3ee732a"
 
       def install
         bin.install "mcli"
@@ -37,15 +45,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_arm64.tar.gz"
-      sha256 "214e2daa248398cdb3afb79b85dc2552e495f50f46db0d15ca6b5ff3923cd9d4"
-
-      def install
-        bin.install "mcli"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_armv6.tar.gz"
-      sha256 "4078ad31407baa2dd847840ed6c96ae06a7859f7b27289a68dcaef0062a85689"
+      sha256 "a5f7900926408931d5c91bb40d4396ef62b7a73c2c5c94fed1bf27d4274c1b9b"
 
       def install
         bin.install "mcli"
