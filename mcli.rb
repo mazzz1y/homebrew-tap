@@ -10,7 +10,7 @@ class Mcli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_amd64.tar.gz"
-      sha256 "7c37a8d0c2b4ea17f003314f6e455fef3b1441abe893536758de59239153bb3b"
+      sha256 "56e285451ffb8b5de2cbb35cd130a0268985f637dab3a0ff0e4e6a5aa1d03776"
 
       def install
         bin.install "mcli"
@@ -18,7 +18,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_arm64.tar.gz"
-      sha256 "4d5982415f69e840b8a22f98d58ff4cfdf732e3944a20b484fe16a4cb5f78020"
+      sha256 "7a67754e3cfa0fe39375327b533758e46125c3105d14f1c7726e2f99c6f6fefc"
 
       def install
         bin.install "mcli"
@@ -27,9 +27,9 @@ class Mcli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_arm64.tar.gz"
-      sha256 "a162eb54e599b7fb360dcf4e75427cb11dcc7b1bf9e43ae146f8ad10f32ecce0"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_armv6.tar.gz"
+      sha256 "b86e80908503af6da32f999d9f1aa53944cca8f0987092aa8423f0bdf27c86e6"
 
       def install
         bin.install "mcli"
@@ -37,15 +37,15 @@ class Mcli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_amd64.tar.gz"
-      sha256 "1a7607e386450be9e6cef1d6f4de85a1f10b85b9b7538eaf20ac3790d9cddc6c"
+      sha256 "efea610e7e6484172512cc0032793562a33ae0f5afe8f3ece6635af52d17e6c8"
 
       def install
         bin.install "mcli"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_armv6.tar.gz"
-      sha256 "78a424a1f884482a756bca4544a43d90cc4254bcf5e5bb3cc652cfab94dca8b6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_arm64.tar.gz"
+      sha256 "57c51cffc7a5cca3ff990a540bed373bf77d65cbd48f1a727d389b3b35ff9fef"
 
       def install
         bin.install "mcli"
