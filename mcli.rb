@@ -10,7 +10,7 @@ class Mcli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_arm64.tar.gz"
-      sha256 "832dbadbfece49a0e8d0d3fa3ef474b5145d58d0b8bf58e1f99c074fd6edbbb3"
+      sha256 "6d9779e9cf90b2e34861af540ef360488ddcf726748325e2caaeab607ba40276"
 
       def install
         bin.install "mcli"
@@ -18,7 +18,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_darwin_amd64.tar.gz"
-      sha256 "0cfdc84dfa26303093ef51f79f6fd356c433660dfa409e3922a673e7fc0101e2"
+      sha256 "92e15a69d9add78901d9d33ab8db67acbb4c68ed58694997e33dd9cb202cc017"
 
       def install
         bin.install "mcli"
@@ -29,7 +29,7 @@ class Mcli < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_armv6.tar.gz"
-      sha256 "b6c8b682d93e6d4f5a451717fb91368ac3ab0cccdbe56d00c9cc59dee1145454"
+      sha256 "06cb786ed86cd860468e4ee78bf155168dfcc2358ac3f2f2597be16a6ff302e3"
 
       def install
         bin.install "mcli"
@@ -37,7 +37,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_amd64.tar.gz"
-      sha256 "32024569b1c7a8131332b42711ae142f85011cab85c1e1c04f9ccbbbe3ee732a"
+      sha256 "fc8b82ec4a7ef0740ab0dbd7bc8695ae7b6af1a59466d4c73cdd87d0d8979959"
 
       def install
         bin.install "mcli"
@@ -45,7 +45,7 @@ class Mcli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mazzz1y/mcli/releases/download/v1.0.0/mcli_1.0.0_linux_arm64.tar.gz"
-      sha256 "a5f7900926408931d5c91bb40d4396ef62b7a73c2c5c94fed1bf27d4274c1b9b"
+      sha256 "9ca894fd4f7f01c1f3ed34bfbdd76fb9e56ffd391a4e31af8f5cd7997f13ebaf"
 
       def install
         bin.install "mcli"
