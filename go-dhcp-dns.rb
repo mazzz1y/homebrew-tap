@@ -5,20 +5,20 @@
 class GoDhcpDns < Formula
   desc "Make DNS go through DHCP"
   homepage "https://github.com/mazzz1y/go-dhcp-dns"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.0/go-dhcp-dns_1.0.0_darwin_amd64.tar.gz"
-      sha256 "7a345671e2ca0ede9dbdb7ac21d68557fb58b0124251435f14d6e75632549c61"
+      url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.1/go-dhcp-dns_1.0.1_darwin_amd64.tar.gz"
+      sha256 "37d1ce5e174dcc5657635fd5099502dfd6e9098c33c5b7d3d48fd4ad120b1740"
 
       def install
         bin.install "go-dhcp-dns"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.0/go-dhcp-dns_1.0.0_darwin_arm64.tar.gz"
-      sha256 "f10c6189df75973b83812f81bd484691880aa6d5a2d672b6f6c914878e2a27c3"
+      url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.1/go-dhcp-dns_1.0.1_darwin_arm64.tar.gz"
+      sha256 "118674d39a77b5f4c768b9550844d67b36d703fb7c1ed0d20d868f3e10d4d104"
 
       def install
         bin.install "go-dhcp-dns"
@@ -29,8 +29,8 @@ class GoDhcpDns < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.0/go-dhcp-dns_1.0.0_linux_amd64.tar.gz"
-        sha256 "cfc1700d0a6adb72484f10370016ccb58f1e33da9cece8557a1c9f8add7878af"
+        url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.1/go-dhcp-dns_1.0.1_linux_amd64.tar.gz"
+        sha256 "35f37475fb800f959901f314d70b5514b90b013d633cbdc35b0fff7637025971"
 
         def install
           bin.install "go-dhcp-dns"
@@ -39,8 +39,8 @@ class GoDhcpDns < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.0/go-dhcp-dns_1.0.0_linux_arm64.tar.gz"
-        sha256 "c8e6f6f8ed67ff219e5dd09b68acd638027a70995b5c81a28e2a75cd7fa2f1dc"
+        url "https://github.com/mazzz1y/go-dhcp-dns/releases/download/v1.0.1/go-dhcp-dns_1.0.1_linux_arm64.tar.gz"
+        sha256 "b48def39567d13294b3318089412996ca835fd4da1046b5156f7d4731c6a20a2"
 
         def install
           bin.install "go-dhcp-dns"
@@ -52,5 +52,6 @@ class GoDhcpDns < Formula
   service do
     run [opt_bin/"go-dhcp-dns"]
     keep_alive true
+    stderr_path "#{var}/log/go-dhcp-dns.err.log"
   end
 end
